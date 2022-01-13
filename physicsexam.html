@@ -8,7 +8,8 @@
     <link rel="icon" href="../../../../favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<title>Parikshya | English Exam</title>
+    <link rel="icon" href="new_logo1.png" type="image/x-icon">
+	  <title>Parikshya | English Exam</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,7 +24,7 @@
 <body>
 
 	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" >Parikshya</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" style="font-family: Poppins; font-size:20px;" >Parikshya</a>
       <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -78,14 +79,12 @@
           </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><br>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Welcome, Ram </h1>
+            <br><br>
+            <h1 class="h2">Exam Details</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
+              
             </div>
           </div>
           <br><br>
@@ -95,16 +94,53 @@
              <center><img src="test-passed.png" height="auto" width="60%">
              <!-- <f style="font-family: Roboto; letter-spacing: 1px; font-size: 2vw;"><b>English</b></f><br><br> 
               <button type="button" class="btn btn-info">View Details</button></center> -->
-              <br><f style="font-family: Roboto; letter-spacing: 1px; font-size: 20px;"><b>Physics</b></f><br>
-              </center> 
-            
+              <br><!--<f style="font-family: Roboto; letter-spacing: 1px; font-size: 20px;"><b>Physics</b></f><br>-->
+              </center>  
           </div>
           <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12">
-            <br><h3 style="font-family:Poppins;border-left: 4px solid lightgrey;">&nbsp;Exam Details</h2>
-            <p style="letter-spacing: 1px;">Date: Jan 3rd,2022</p>
+            <br><h3 style="font-family:Poppins;border-left: 4px solid lightgrey;">&nbsp;Physics</h2><br>
+            <p style="letter-spacing: 1px;">Date: Jan 1st,2022</p>
             <p style="letter-spacing:1px">Time: 2pm</p><br>
-            <button type="button" class="btn btn-info" onclick="escapeRoom()">View in calendar</button></center>
-      </div>
+            <button type="button" class="btn btn-info" onclick="window.location.href='calendarpage.html';">View in calendar</button></center>
+          </div>
+          </div>
+        </main>
+
+      
+
+       
+       <script>
+      function getFullscreenElement(){
+    return document.getfullscreenElement
+      || document.webkitFullscreenElement
+      || document.mozFullscreenElement
+      || document.msFullscreenElement;
+   }
+
+      function toggleFullscreen()
+   {
+    if(getFullscreenElement()){
+        document.exitFullscreen();
+        document.location = document.location.href;
+    }
+    else{
+      document.documentElement.requestFullscreen().catch(console.log);
+    }
+  }
+
+  document.addEventListener("dblclick",() => {
+    toggleFullscreen();
+  });
+
+  document.addEventListener('keydown', function(event){
+  const key = event.key;
+  if(key === "Escape"){
+    toggleFullscreen();
+  }
+});
+
+    </script>
+       
 
 
 
@@ -120,42 +156,6 @@
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script>
-
-       function getFullscreenElement(){
-    return document.getfullscreenElement
-      || document.webkitFullscreenElement
-      || document.mozFullscreenElement
-      || document.msFullscreenElement;
-   }
-
-      function toggleFullscreen()
-   {
-    if(getFullscreenElement()){
-        document.exitFullscreen();
-        document.location.reload(true)
-    }
-    else{
-      document.documentElement.requestFullscreen().catch(console.log);
-    }
-  }
-
-  document.addEventListener("dblclick",() => {
-    toggleFullscreen();
-  });
-
-  document.addEventListener('keydown', function(event){
-  if(event.key === "Escape"){
-    document.location.reload(true)
-  }
-});
-
-
-      function escapeRoom()
-      {
-         document.location.reload(true)
-      }
-    </script>
     <script>
       feather.replace()
     </script>
